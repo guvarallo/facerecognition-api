@@ -3,20 +3,20 @@ const bcrypt = require('bcrypt');
 const cors = require('cors');
 const saltRounds = 10;
 const knex = require('knex');
-const dbPass = require('./dbPass');
+const dbPass = require('./dbPass.js');
 
-const signin = require('./controllers/signin');
-const signup = require('./controllers/signup');
-const profile = require('./controllers/profile');
-const image = require('./controllers/image');
+const signin = require('./controllers/signin.js');
+const signup = require('./controllers/signup.js');
+const profile = require('./controllers/profile.js');
+const image = require('./controllers/image.js');
 
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'gus',
-    password : `${dbPass.password}`,
-    database : 'face-recon'
+    host : process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
+    }
   }
 });
 
