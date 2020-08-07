@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 const cors = require('cors');
 const saltRounds = 10;
 const knex = require('knex');
-const dbPass = require('./dbPass.js');
 
 const signin = require('./controllers/signin.js');
 const signup = require('./controllers/signup.js');
