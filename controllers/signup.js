@@ -31,5 +31,5 @@ const handleSignUp = (db, bcrypt, saltRounds) => (req, res) => {
 }
 
 module.exports = {
-  handleSignUp: handleSignUp
+  handleSignUp
 }
