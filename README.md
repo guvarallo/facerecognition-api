@@ -8,6 +8,7 @@ You will need to generate your own API Key on Clarifai at https://www.clarifai.c
 
 ## Built With
 
+* [Node](https://nodejs.org/)
 * [Express](https://expressjs.com/)
 * [PostgreSQL](https://www.postgresql.org/)
 * [bcrypt](https://github.com/kelektiv/node.bcrypt.js)
